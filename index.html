@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #e3f2fd, #fff9e6);
+        }
+
+        .image-side {
+            background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.3)), url("./Asset/computer-girl.jpeg") no-repeat center center;
+            background-size: cover;
+            min-height: 400px;
+        }
+
+        .form-box {
+            background: linear-gradient(to bottom right, #7baee0, #e9cc6e);
+        }
+
+        .form-logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .form-title {
+            color: #15278f;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center py-5">
+
+        <div class="row shadow-lg rounded-4 overflow-hidden w-100" style="max-width: 1100px;">
+
+            <div class="col-lg-6 col-md-6 image-side"></div>
+
+            <div class="col-md-6 d-flex align-items-center justify-content-center p-4 form-box">
+                <div class="w-100" style="max-width: 500px;">
+
+                    <img src="./Asset/course-logo.png" alt="Course logo" class="form-logo mx-auto d-block">
+                    <h2 class="form-title">Online Course Registration</h2>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="fullName" id="fullName"
+                                placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="03XXXXXXXXX"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="course" class="form-label">Select Course</label>
+                            <select class="form-select" name="course" id="course" required>
+                                <option selected disabled>Choose a course...</option>
+                                <option>Web & App Development</option>
+                                <option>Web Design</option>
+                                <option>Digital Marketing</option>
+                                <option>Graphic Design</option>
+                                <option>UI/UX Bootcamp</option>
+                                <option>Artificial Intelligence</option>
+                                <option>Techno Kids</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Why are you interested?</label>
+                            <textarea class="form-control" name="message" id="message" rows="7"
+                                placeholder="Tell us briefly" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">Gender</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="other" value="Other" required>
+                                <label class="form-check-label" for="other">Other</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control" name="age" id="age" placeholder="Enter your age"
+                                min="10" max="100" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="regDate" class="form-label">Registration Date</label>
+                            <input type="date" class="form-control" name="regDate" id="regDate" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="timeSlot" class="form-label">Preferred Time</label>
+                            <select class="form-select" name="timeSlot" id="timeSlot" required>
+                                <option selected disabled>Choose time slot...</option>
+                                <option>Morning (9 AM - 12 PM)</option>
+                                <option>Afternoon (1 PM - 4 PM)</option>
+                                <option>Evening (5 PM - 8 PM)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="education" class="form-label">Education Level</label>
+                            <select class="form-select" name="education" id="education" required>
+                                <option selected disabled>Select education...</option>
+                                <option>Grade-3 to Grade-8</option>
+                                <option>Matric</option>
+                                <option>Bachelor's</option>
+                                <option>Master's</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                                <label class="form-check-label" for="gridCheck">
+                                I agree to the terms & conditions
+                            </label>
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Register Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
